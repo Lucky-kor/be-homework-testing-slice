@@ -5,12 +5,14 @@ import com.springboot.stamp.Stamp;
 import com.springboot.validator.NotSpace;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 public class MemberDto {
+    @Setter
     @Getter
     @AllArgsConstructor // TODO 테스트를 위해 추가됨
     public static class Post {
@@ -26,6 +28,7 @@ public class MemberDto {
         private String phone;
     }
 
+    @Setter
     @Getter
     public static class Patch {
         private long memberId;
