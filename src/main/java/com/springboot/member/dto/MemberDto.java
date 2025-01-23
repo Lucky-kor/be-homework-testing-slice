@@ -5,6 +5,7 @@ import com.springboot.stamp.Stamp;
 import com.springboot.validator.NotSpace;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -40,6 +41,10 @@ public class MemberDto {
 
         private Member.MemberStatus memberStatus;
 
+        public Patch(String name, String phone) {
+            this.name = name;
+            this.phone = phone;
+        }
 
         public void setMemberId(long memberId) {
             this.memberId = memberId;
