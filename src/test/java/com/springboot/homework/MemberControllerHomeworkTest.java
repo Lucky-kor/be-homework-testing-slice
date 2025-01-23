@@ -69,7 +69,7 @@ public class MemberControllerHomeworkTest {
                                 .accept(MediaType.APPLICATION_JSON)
                                 .content(postContent)
                 );
-        MemberDto.Patch patch = new MemberDto.Patch("송호근","010-3055-6379");
+        MemberDto.Patch patch = new MemberDto.Patch("송호근","010-1111-6379");
         String patchContent = gson.toJson(patch);
         String location = postActions.andReturn().getResponse().getHeader("Location");
 
